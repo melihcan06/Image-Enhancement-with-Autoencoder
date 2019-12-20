@@ -48,18 +48,6 @@ X_test_noisy = X_test_noisy[..., np.newaxis]
 
 input_img = Input(shape=(350, 350, 1)) 
 
-"""x = Conv2D(32, (3, 3), activation='relu', padding='same')(input_img)
-x = MaxPooling2D((2, 2), padding='same')(x)
-x = Conv2D(32, (3, 3), activation='relu', padding='same')(x)
-encoded = MaxPooling2D((2, 2), padding='same')(x)
-
-
-x = Conv2D(32, (3, 3), activation='relu', padding='same')(encoded)
-x = UpSampling2D((2, 2))(x)
-x = Conv2D(32, (3, 3), activation='relu', padding='same')(x)
-x = UpSampling2D((2, 2))(x)
-decoded = Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x)"""
-
 #encoder
 conv1 = Conv2D(32, (3,3), activation='relu', padding='same')(input_img) 
 conv2 = Conv2D(64, (3,3), activation='relu', padding='same')(conv1)
